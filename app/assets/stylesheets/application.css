@@ -1,0 +1,75 @@
+body {
+    background: #263039;
+    color: aliceblue;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: greenyellow;
+
+}
+
+#books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.book {
+    width: 150px;
+    height: 200px;
+    perspective: 1000px;
+    position: relative;
+    margin: 20px;
+    box-shadow: 0 0 45px black;
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: left;
+    font-size: 12px;
+    box-shadow: 0px 0 0px black;  
+}
+
+.book-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    font-size: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+.book:hover .book-cover {
+    transform: rotateY(-170deg) rotateZ(-1deg) scale(1.02);
+    box-shadow: -30px 0 60px #00000099;    
+}
+
+
+
+.book:hover .book-content {
+    opacity: 1;
+}

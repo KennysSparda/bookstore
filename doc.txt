@@ -1,0 +1,16 @@
+
+COMANDO:
+
+rails g scaffold object_name
+
+
+NOSSO EXEMPLO:
+name		string
+description	text
+author		string
+genre		string
+publisher	string
+price		float
+quantity	integer
+
+

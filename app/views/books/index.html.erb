@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<%= link_to "New book", new_book_path %>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <% color = book.color_scheme %>
+    <div class="book" style="position: relative;">
+      <div class="book-content">
+
+        <p><strong>Description:</strong> <%= book.description %></p>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>Genre:</strong> <%= book.genre %></p>
+        <p><strong>Publisher:</strong> <%= book.publisher %></p>
+        <p><strong>Price:</strong> <%= book.price %></p>
+        <p><strong>Quantity:</strong> <%= book.quantity %></p>
+      </div>
+      <div class="book-cover" style="background-color: <%= color[:background] %>; color: <%= color[:text] %>;">
+        <h2><%= book.name %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>
